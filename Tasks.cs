@@ -37,15 +37,26 @@ namespace LAB280621
         public string GetString(string str)
         {
             char[] ch = str.ToCharArray();
-            if (str.Length % 3 == 0 && str.Length>3)
+            string st = "";
+            if (str.Length < 2 && str.Length % 2 == 0 || str.Length == 3)
+            {
+                ch = str.ToCharArray(str.Length / 3, str.Length / 2);
+                st = String.Concat(ch);
+            }
+            else
+            {
+                st = "ПОШЕЛ НАХУЙ";
+            }
+            /*if (str.Length % 3 == 0 && str.Length > 3)
             {
                 ch = str.ToCharArray(str.Length / 3, (str.Length / 2) - 1);
             }
             else
             {
                 ch = str.ToCharArray(str.Length / 3, str.Length / 2);
-            }
-            string st = String.Concat(ch);
+            }*/
+            
+            
             return st;
         }
     }
