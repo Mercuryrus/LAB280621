@@ -12,7 +12,6 @@ namespace LAB280621
         {
             bool simple = false;
             int denom = 0;
-
             for (int i = 1; i <= number; i++)
             {
                 if (number % i == 0)
