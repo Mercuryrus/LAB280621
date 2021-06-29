@@ -15,7 +15,7 @@ namespace LAB280621
             int[] arr = new int[] { -1, 2, -3, 4, -5, 6, 7, 8, 9 };
             Task Sim = new Task();
 
-            Console.Write(Sim.GetSimple(number) + "\n\n");
+            Console.WriteLine(Sim.GetSimple(number) + "\n\n");
 
             foreach (int i in Sim.GetTripleArr(arr))
             {
@@ -29,11 +29,11 @@ namespace LAB280621
             }
             Console.WriteLine("\n");
 
-            foreach (var i in Sim.GetStringArr(arr))
-            {
-                Console.Write($"{i} ");
-            }
+            Console.WriteLine(Sim.GetStringArr(arr));
             
+            Console.WriteLine("\nВведите строку: ");
+            string str = Console.ReadLine();
+            Console.WriteLine(Sim.GetString(str));
 
         }
     }

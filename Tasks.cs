@@ -32,6 +32,21 @@ namespace LAB280621
 
         public int[] GetTripleArr(int[] arr) => Array.ConvertAll(arr, x => x * 3);
         public int[] GetAntiArr(int[] arr) => Array.ConvertAll(arr, x => x * -1);
-        public string[] GetStringArr(int[] arr) => Array.ConvertAll(arr, x => x.ToString());
+        public string GetStringArr(int[] arr) => string.Join(' ',Array.ConvertAll(arr, x => x.ToString()));
+
+        public string GetString(string str)
+        {
+            char[] ch = str.ToCharArray();
+            if (str.Length % 3 == 0 && str.Length>3)
+            {
+                ch = str.ToCharArray(str.Length / 3, (str.Length / 2) - 1);
+            }
+            else
+            {
+                ch = str.ToCharArray(str.Length / 3, str.Length / 2);
+            }
+            string st = String.Concat(ch);
+            return st;
+        }
     }
 }
